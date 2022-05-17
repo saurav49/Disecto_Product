@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllProducts, toggleProductLoader } from '../productSlice';
 import { ProductCard } from '../index';
-import { Grid, Container, Flex } from '@chakra-ui/react';
+import { Grid, Flex } from '@chakra-ui/react';
 
 const ProductList = () => {
   const { productList, searchedProduct } = useSelector(state => state.product);
@@ -11,6 +11,7 @@ const ProductList = () => {
   useEffect(() => {
     dispatch(toggleProductLoader('TRUE'));
     dispatch(getAllProducts());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

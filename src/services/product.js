@@ -1,9 +1,5 @@
 import axios from 'axios';
-import {
-  PRODUCT__API,
-  SET__RATING__API,
-  GET__RATING__OF__PRODUCT__API,
-} from '../urls';
+import { PRODUCT__API, SET__RATING__API } from '../urls';
 
 const fetchAllProducts = async () => {
   try {

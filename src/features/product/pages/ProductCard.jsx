@@ -1,4 +1,4 @@
-import { setSelectedProduct, toggleProductLoader } from '../productSlice';
+import { setSelectedProduct } from '../productSlice';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Box, Image, Stack, Heading, Badge } from '@chakra-ui/react';

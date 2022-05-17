@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { setSearchedProduct } from '../productSlice';
-import { Input, VStack, Box, StackDivider, Text } from '@chakra-ui/react';
+import { Input, VStack, Text } from '@chakra-ui/react';
 import styles from './Product.module.css';
 
 const Autocomplete = () => {
@@ -12,12 +12,14 @@ const Autocomplete = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     setSearchResults(productList);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [productList.length]);
 
   useEffect(() => {
     if (searchTerm.length === 0) {
       dispatch(setSearchedProduct({}));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchTerm]);
 
   const updateSearch = e => {
